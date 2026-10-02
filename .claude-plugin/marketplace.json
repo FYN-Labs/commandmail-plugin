@@ -1,0 +1,17 @@
+{
+  "name": "commandmail",
+  "owner": {
+    "name": "FYN Labs LLC",
+    "email": "support@fyn-labs.com",
+    "url": "https://commandmail.app"
+  },
+  "description": "Command Mail plugin by FYN Labs LLC.",
+  "plugins": [
+    {
+      "name": "command-mail",
+      "source": "./",
+      "description": "Read and organize email, write and revise drafts, send replies, and manage follow-ups in connected Command Mail accounts.",
+      "category": "productivity"
+    }
+  ]
+}
