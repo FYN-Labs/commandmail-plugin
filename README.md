@@ -59,6 +59,8 @@ Each mailbox also has an autonomy level (read, suggest, rules or auto) that limi
 | Gemini CLI | `gemini-extension.json` |
 | All hosts | `skills/mail-workflow/`, `assets/` |
 
+`plugin.json` also carries the listing, review cases and release notes for the OpenAI plugin directory under `extensions.com.openai`. Build the upload ZIP with `scripts/build-openai-zip.sh /path/to/commandmail-plugin.zip`; it contains only the portable package. Reviewer credentials never belong in this repository.
+
 ## Legal and support
 
 - [Privacy policy](https://commandmail.app/privacy)
