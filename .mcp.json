@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "commandmail": {
+      "type": "http",
+      "url": "https://commandmail.app/mcp"
+    }
+  }
+}

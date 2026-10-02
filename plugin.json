@@ -1,0 +1,52 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "command-mail",
+  "version": "0.1.0",
+  "description": "Read and organize email, write and revise drafts, send replies, and manage follow-ups in connected Command Mail accounts.",
+  "author": {
+    "name": "FYN Labs LLC",
+    "email": "support@fyn-labs.com",
+    "url": "https://commandmail.app"
+  },
+  "homepage": "https://commandmail.app",
+  "repository": "https://github.com/FYN-Labs/commandmail-plugin",
+  "license": "MIT",
+  "keywords": [
+    "email",
+    "mail",
+    "inbox",
+    "follow-up",
+    "briefing"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Command Mail",
+        "shortDescription": "Read, draft and act on email",
+        "longDescription": "Work with email across your connected Command Mail mailboxes. Search and read conversations, organize messages, write and revise drafts, send approved replies, forward messages, track follow-ups and prepare a mail briefing. Actions follow your account permissions and mailbox settings. Mailbox and domain setup tools help connect your existing addresses.",
+        "developerName": "FYN Labs LLC",
+        "category": "Productivity",
+        "capabilities": [
+          "Read and organize email",
+          "Create and revise drafts",
+          "Send replies and forward messages",
+          "Track follow-ups",
+          "Connect mailboxes"
+        ],
+        "websiteURL": "https://commandmail.app",
+        "supportURL": "https://commandmail.app/legal",
+        "privacyPolicyURL": "https://commandmail.app/privacy",
+        "termsOfServiceURL": "https://commandmail.app/terms",
+        "defaultPrompt": [
+          "Which emails need my reply today?",
+          "Draft a reply to the latest project email and save it for review.",
+          "Show overdue follow-ups and the original conversations."
+        ],
+        "brandColor": "#2862bd",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo-light.png",
+        "logoDark": "./assets/logo-dark.png"
+      }
+    }
+  }
+}

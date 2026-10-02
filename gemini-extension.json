@@ -1,0 +1,10 @@
+{
+  "name": "command-mail",
+  "version": "0.1.0",
+  "description": "Read and organize email, write and revise drafts, send replies, and manage follow-ups in connected Command Mail accounts.",
+  "mcpServers": {
+    "commandmail": {
+      "httpUrl": "https://commandmail.app/mcp"
+    }
+  }
+}

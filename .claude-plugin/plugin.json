@@ -1,0 +1,26 @@
+{
+  "name": "command-mail",
+  "displayName": "Command Mail",
+  "version": "0.1.0",
+  "description": "Read and organize email, write and revise drafts, send replies, and manage follow-ups in connected Command Mail accounts.",
+  "author": {
+    "name": "FYN Labs LLC",
+    "email": "support@fyn-labs.com",
+    "url": "https://commandmail.app"
+  },
+  "homepage": "https://commandmail.app",
+  "repository": "https://github.com/FYN-Labs/commandmail-plugin",
+  "license": "MIT",
+  "keywords": [
+    "email",
+    "mail",
+    "inbox",
+    "follow-up",
+    "briefing"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://commandmail.app/en/docs",
+  "supportUrl": "https://commandmail.app/legal",
+  "privacyPolicyUrl": "https://commandmail.app/privacy",
+  "termsOfServiceUrl": "https://commandmail.app/terms"
+}
