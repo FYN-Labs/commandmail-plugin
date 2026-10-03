@@ -47,8 +47,8 @@ those writes instead of pretending they are recoverable.
 Current labels/folder flags come from `list_threads` or `search_mail` rows, not
 the compact `get_thread` result. Do not replace a label set you cannot read.
 
-Use approved journaled
-spam/archive actions where appropriate and fresh `apply_proposal` fingerprints
+Use approved journaled spam/archive actions where appropriate and fresh
+`apply_proposal` fingerprints
 for confirmed groups. A suggestion, skipped item or tool refusal is not a filed
 message. Protected or changed conversations go to review.
 

@@ -50,8 +50,7 @@ workflow after the current snapshot has actually been shown/delivered. In JSON
 the snapshot ID is `id`; pass that value as the acknowledgement input `briefId`.
 In Markdown use the appended `briefId` line. Keep the matching time zone.
 A read-only preview does not require acknowledgement. A stale snapshot must be
-rebuilt and shown, not acknowledged
-blindly. If an external channel's delivery is uncertain, leave the baseline
+rebuilt and shown, not acknowledged blindly. If an external channel's delivery is uncertain, leave the baseline
 unchanged and report uncertainty. Do not infer permission to use that channel.
 
 Finish at a length suitable for the user's attention. Offer relevant next
