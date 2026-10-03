@@ -2,9 +2,33 @@
 
 [Command Mail](https://commandmail.app) is one inbox for all of your email addresses, built so your AI agent can work in it. The agent reads, searches, sorts and drafts, and sends only if you allow it, per permission and per mailbox.
 
-This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds a mail workflow skill. You need a Command Mail account: [start for free](https://commandmail.app/en) with one address; Pro adds sending, more addresses and your full history.
+This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and includes seven mail skills. You need a Command Mail account: [start for free](https://commandmail.app/en) with one address; Pro adds sending, more addresses and your full history.
 
 The server is also listed in the [Official MCP Registry](https://registry.modelcontextprotocol.io) as `app.commandmail/mail`.
+
+## Make the connection useful
+
+Start with “Set up my mail assistant with me.” The setup skill clarifies what
+matters, which newsletters to keep, how much the agent may do and whether you
+want checkups at specific times. It tries a small first run before expanding
+the workflow. Use your own language; the agent should follow it.
+
+The package includes:
+
+- **Setup:** preferences, containers, action scope and an optional host schedule.
+- **Mailbox cleanup:** spam candidates and wanted mail, archive folders and
+  resumable work through a large backlog.
+- **Ongoing triage:** new/changed mail, existing exceptions and visible results.
+- **Briefing:** decisions, payments, deadlines, replies and scan gaps.
+- **Replies:** saved drafts, human-approved revisions or explicitly scoped
+  direct replies.
+- **Follow-ups:** track unanswered sent messages and prepare reminders.
+- **General mail workflow:** find/read mail and select the appropriate skill.
+
+[Read the skill catalogue and installation options](docs/agent-skills.md).
+These are agent instructions, not a background service. A recurring job needs
+your agreement and an actual scheduler in the agent host. A remote MCP connection
+alone does not install the skills.
 
 ## Install
 
@@ -63,9 +87,14 @@ The plugin ships no executable code, hooks or install scripts. It declares one r
 | ChatGPT, Codex, Cursor ([Agent Plugins](https://agent-plugins.org)) | `plugin.json`, `mcp.json` |
 | Claude Code | `.claude-plugin/`, `.mcp.json` |
 | Gemini CLI | `gemini-extension.json` |
-| All hosts | `skills/mail-workflow/`, `assets/` |
+| Skill-capable hosts | `skills/` (seven skills), `assets/` |
 
 `plugin.json` also carries the listing, review cases and release notes for the OpenAI plugin directory under `extensions.com.openai`. Build the upload ZIP with `scripts/build-openai-zip.sh /path/to/commandmail-plugin.zip`; it contains only the portable package. Reviewer credentials never belong in this repository.
+
+Each skill is self-contained. Copy its complete folder, including references,
+when installing it separately. Hosts vary in discovery and persistence; check
+that the intended skill was loaded. The server's existing organization guide
+and CLI installer remain available independently of the plugin skill pack.
 
 ## Legal and support
 
