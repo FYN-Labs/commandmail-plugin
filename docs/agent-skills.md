@@ -1,5 +1,7 @@
 # Command Mail agent skills
 
+[Deutsch](agent-skills.de.md)
+
 Purpose: make a connected agent useful from the first conversation and keep
 the user's choices in charge. These Markdown skills use ordinary Command Mail
 MCP or CLI access. They contain no scheduler, install hooks, background worker,
@@ -22,7 +24,7 @@ user's language. A user does not need to learn tool names to choose a workflow.
 
 Use setup first when no preferences exist. A historical cleanup is a separate
 job; once it is reviewed, triage can handle arrivals and a briefing can surface
-decisions. Existing agreed workflows stay valid. Each skill can also be used
+decisions. Existing agreed workflows stay valid. Each skill can also handle its core task
 alone; the optional cross-links are not prerequisites for ordinary mail access.
 
 ## Delivery and installation

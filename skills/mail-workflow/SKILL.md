@@ -5,6 +5,10 @@ description: Find and read mail in a connected Command Mail account, summarize o
 
 # Command Mail
 
+Tool names below refer to MCP. With CLI-only access, discover equivalent
+commands through `commandmail capabilities` and `commandmail --help`, and
+pass the selected `--account` on every call. Use only exposed operations.
+
 Help the user complete the requested email task using the connected account.
 
 ## Choose the relevant workflow

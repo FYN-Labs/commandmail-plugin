@@ -5,6 +5,10 @@ description: Process new and changed Command Mail messages during a user-request
 
 # Keep the inbox useful
 
+Tool names below refer to MCP. With CLI-only access, discover equivalent
+commands through `commandmail capabilities` and `commandmail --help`, and
+pass the selected `--account` on every call. Use only exposed operations.
+
 Run only when asked or under an actual authorized host schedule. Load the user's
 confirmed operating agreement if available; if it is missing, do a read-only
 review and ask for the missing scope. Do not infer a recurring mandate from an
@@ -38,7 +42,12 @@ Reuse existing labels and folders. Preserve the whole current label set when
 using `set_thread_labels`; labels may show archived/Spam mail and do not restore
 it. Label/folder writes lack journal undo. Refresh and privately record their
 previous state only in a user-approved store; if that is unavailable, propose
-those writes instead of pretending they are recoverable. Use approved journaled
+those writes instead of pretending they are recoverable.
+
+Current labels/folder flags come from `list_threads` or `search_mail` rows, not
+the compact `get_thread` result. Do not replace a label set you cannot read.
+
+Use approved journaled
 spam/archive actions where appropriate and fresh `apply_proposal` fingerprints
 for confirmed groups. A suggestion, skipped item or tool refusal is not a filed
 message. Protected or changed conversations go to review.

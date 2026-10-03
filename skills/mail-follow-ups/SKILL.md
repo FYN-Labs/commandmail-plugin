@@ -5,6 +5,10 @@ description: Track Command Mail conversations waiting for a reply, set due dates
 
 # Keep promises and unanswered conversations visible
 
+Tool names below refer to MCP. With CLI-only access, discover equivalent
+commands through `commandmail capabilities` and `commandmail --help`, and
+pass the selected `--account` on every call. Use only exposed operations.
+
 Read `capabilities`, then `list_follow_ups` and the relevant `get_thread`.
 Reuse existing waits. Distinguish “I owe them a reply” from “I sent something
 and now wait for them”; the follow-up tools cover the latter. A missing

@@ -5,6 +5,10 @@ description: Set up a personal mail assistant for a connected Command Mail accou
 
 # Set up a mail assistant
 
+Tool names below refer to MCP. With CLI-only access, discover equivalent
+commands through `commandmail capabilities` and `commandmail --help`, and
+pass the selected `--account` on every call. Use only exposed operations.
+
 Turn “manage my email” into a small, agreed workflow. Speak the user's language
 and use everyday words. Start with a useful first run, not a long questionnaire.
 

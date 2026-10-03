@@ -5,6 +5,10 @@ description: Audit and organize an existing Command Mail backlog, including larg
 
 # Clean up a mailbox without losing work
 
+Tool names below refer to MCP. With CLI-only access, discover equivalent
+commands through `commandmail capabilities` and `commandmail --help`, and
+pass the selected `--account` on every call. Use only exposed operations.
+
 Read `capabilities` and establish the requested account, mailboxes, folders and
 date range. Reuse explicit keep/remove decisions and existing containers. If the
 user asks for a list first, make no label, filing or rule changes before their
@@ -51,6 +55,12 @@ Named inbox views use `create_label` and can overlap. Existing archived or Spam
 mail may appear in them; a label is not a not-spam verdict. `set_thread_labels`
 replaces the entire label set: read and preserve existing IDs when adding one.
 Label changes currently have no activity-journal undo.
+
+Read current label and folder state from the relevant `list_threads` or
+`search_mail` rows; compact `get_thread` output does not include those fields.
+If a current row is unavailable, defer replacement rather than guessing that
+there are no existing labels. Truncated or incomplete content is a review gap,
+not enough evidence to file a protected conversation.
 
 Archive folders use `import_folders` (preview first) and `move_to_folder`.
 Importing paths creates no messages and moves no mail. Folder filing archives the

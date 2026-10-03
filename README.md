@@ -91,7 +91,7 @@ The plugin ships no executable code, hooks or install scripts. It declares one r
 
 `plugin.json` also carries the listing, review cases and release notes for the OpenAI plugin directory under `extensions.com.openai`. Build the upload ZIP with `scripts/build-openai-zip.sh /path/to/commandmail-plugin.zip`; it contains only the portable package. Reviewer credentials never belong in this repository.
 
-Each skill is self-contained. Copy its complete folder, including references,
+Each skill is independently usable for its core task. Copy its complete folder, including references,
 when installing it separately. Hosts vary in discovery and persistence; check
 that the intended skill was loaded. The server's existing organization guide
 and CLI installer remain available independently of the plugin skill pack.

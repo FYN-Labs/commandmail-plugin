@@ -5,12 +5,23 @@ description: Draft, revise or send a specific Command Mail reply using conversat
 
 # Prepare replies the user can trust
 
-Read `capabilities`, find the requested conversation and call `get_thread` plus
-`suggest_reply` for the actual message ID. The latter supplies reply context; it
-does not generate text. Check receiving/sending identity, reply versus reply-all,
-recipients, safety flags and any existing draft. Do not mix shared and personal
-mailboxes. Missing rights or source access are limits, not reasons to borrow
-another connection or use the backend.
+Tool names below refer to MCP. With CLI-only access, discover equivalent
+commands through `commandmail capabilities` and `commandmail --help`, and
+pass the selected `--account` on every call. Use only exposed operations.
+
+Read `capabilities`. For a new or revised reply, find the requested conversation
+and use `get_thread` and `suggest_reply` only where their rights are available.
+The latter supplies reply context; it does not generate text. Check
+receiving/sending identity, reply versus reply-all, recipients, safety flags and
+any existing draft. If source context is required but unavailable, ask rather
+than guess.
+
+For sending an existing approved draft, start with `list_agent_drafts` and
+`get_agent_draft`, checking the exact current content, identity, recipients and
+revision. These are available even with only `mail:send-approved`; do not require
+mail-reading or drafting rights for this narrow workflow. Additional source
+reads are optional when needed and permitted. Do not mix shared and personal
+mailboxes or borrow another connection/backend to bypass a limit.
 
 Use confirmed user context and style when actually available and relevant. Do
 not assume the host shares all memory across products. Check the latest messages

@@ -25,6 +25,12 @@ page until `nextCursor` is absent. Deduplicate source message IDs and map them
 to thread IDs. Read each relevant thread; metadata coverage is not content
 triage. Change time differs from the original mail date, especially for imports.
 
+With CLI-only access, `commandmail checkup --since … --until …` currently pages
+up to 10,000 messages per call. Use smaller adjacent UTC windows and deduplicate
+their shared boundaries. If a narrow window still exceeds that cap, report it
+and defer that slice; do not discard items or claim complete coverage. MCP
+`mail_changes` exposes its continuation cursor directly.
+
 ## Avoid moving the page under your feet
 
 Offset pagination over a folder changes when messages are moved. First enumerate
