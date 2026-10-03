@@ -2,7 +2,9 @@
 
 [Command Mail](https://commandmail.app) is one inbox for all of your email addresses, built so your AI agent can work in it. The agent reads, searches, sorts and drafts, and sends only if you allow it, per permission and per mailbox.
 
-This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds a mail workflow skill. You need a Command Mail account. Command Mail is currently in a guided pilot; you can [apply here](https://commandmail.app/en/bewerben).
+This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds a mail workflow skill. You need a Command Mail account: [start for free](https://commandmail.app/en) with one address; Pro adds sending, more addresses and your full history.
+
+The server is also listed in the [Official MCP Registry](https://registry.modelcontextprotocol.io) as `app.commandmail/mail`.
 
 ## Install
 
@@ -50,6 +52,10 @@ On first use, your agent opens Command Mail in the browser. Sign in and switch o
 
 Each mailbox also has an autonomy level (read, suggest, rules or auto) that limits what an agent may change. Email content is treated as data, never as instructions.
 
+## Network and credentials
+
+The plugin ships no executable code, hooks or install scripts. It declares one remote MCP server, `https://commandmail.app/mcp`, and the agent host talks only to `commandmail.app`: the MCP endpoint and the OAuth endpoints it advertises under `/.well-known/`. The only credential is the OAuth token your agent host receives after you sign in; you never enter a password or API key into the plugin.
+
 ## Package layout
 
 | Host | Files |
@@ -58,6 +64,8 @@ Each mailbox also has an autonomy level (read, suggest, rules or auto) that limi
 | Claude Code | `.claude-plugin/`, `.mcp.json` |
 | Gemini CLI | `gemini-extension.json` |
 | All hosts | `skills/mail-workflow/`, `assets/` |
+
+`plugin.json` also carries the listing, review cases and release notes for the OpenAI plugin directory under `extensions.com.openai`. Build the upload ZIP with `scripts/build-openai-zip.sh /path/to/commandmail-plugin.zip`; it contains only the portable package. Reviewer credentials never belong in this repository.
 
 ## Legal and support
 

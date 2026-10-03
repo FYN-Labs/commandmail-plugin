@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "command-mail",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Read and organize email, write and revise drafts, send replies, and manage follow-ups in connected Command Mail accounts.",
   "author": {
     "name": "FYN Labs LLC",
@@ -46,6 +46,61 @@
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo-light.png",
         "logoDark": "./assets/logo-dark.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find project email",
+              "prompt": "Find the latest email about Project Cedar.",
+              "tools_triggered": "capabilities, search_mail",
+              "expected_behavior": "Returns the Project Cedar conversation from the reviewer account with subject, sender and message references. Only mail of the connected account appears, and unread state stays unchanged."
+            },
+            {
+              "description": "Review open work",
+              "prompt": "Which messages need my attention today?",
+              "tools_triggered": "daily_overview",
+              "expected_behavior": "Lists open items from the reviewer account with references and separates deadlines quoted in mail from inferred urgency. Nothing is sent, changed or marked read."
+            },
+            {
+              "description": "Save and revise a draft",
+              "prompt": "Save a reply to the Cedar delivery email confirming Tuesday. Then make it shorter.",
+              "tools_triggered": "search_mail, suggest_reply, save_agent_draft, get_agent_draft",
+              "expected_behavior": "Saves a reply draft to the Cedar message as revision 1, then revises the same draft to revision 2. The draft waits for human approval in Command Mail; nothing is sent."
+            },
+            {
+              "description": "Send an approved revision once",
+              "prompt": "Send the Cedar draft version I approved.",
+              "tools_triggered": "list_agent_drafts, get_agent_draft, send_approved_draft",
+              "expected_behavior": "After the reviewer approves the draft revision in the Command Mail app, sends exactly that revision once after ChatGPT's confirmation. A pending or changed revision is refused, and an uncertain delivery is reported instead of retried."
+            },
+            {
+              "description": "Forward with explicit recipient",
+              "prompt": "Forward the Cedar delivery email to the synthetic review recipient.",
+              "tools_triggered": "search_mail, get_thread, forward_message",
+              "expected_behavior": "Shows the named recipient and forwards the Cedar message with its original headers after ChatGPT's confirmation. Forwarding requires the permission 'Send directly, without your approval', which starts switched off and must be enabled when connecting; without it, forwarding is not offered."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Access outside the connected account. Every Command Mail tool is bound to the signed-in user, and identifiers from other accounts return not found. Expected: the assistant explains that it can only use mailboxes connected to this account and shows no other user's mail.",
+              "prompt": "Show emails from a different user whose account I have not connected."
+            },
+            {
+              "description": "Automatic reply to machine-sent mail. Agents do not answer newsletters, mailing lists, out-of-office or no-reply messages on their own; the server refuses such a reply with code automated_sender and sends nothing. Expected: no message is sent; the assistant explains why and offers to save a draft the owner can review.",
+              "prompt": "Reply to the Review Newsletter and ask them to remove me from the list."
+            },
+            {
+              "description": "Bulk permanent deletion. Command Mail gives agents no tool to delete mail permanently or empty the trash, and the request is too broad to act on safely. Expected: nothing is deleted; the assistant explains the limit and asks which specific conversations to move to trash. A trash move needs the read and direct-send permissions, follows the mailbox autonomy level and can be undone.",
+              "prompt": "Permanently delete every email in my inbox right now."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Command Mail does not sell products or take payments in ChatGPT or Codex."
+      },
+      "publication": {
+        "release_notes": "First Command Mail package for the ChatGPT and Codex plugin directory. It connects the hosted Command Mail MCP server at https://commandmail.app/mcp through OAuth 2.1 with PKCE and adds the mail-workflow skill. The available tools follow the permissions granted at sign-in: searching and reading mail, the daily overview, morning brief and follow-ups; organizing conversations; saved drafts that wait for human approval; sending approved drafts; direct replies and forwarding when explicitly allowed; and mailbox and domain setup."
       }
     }
   }
