@@ -5,7 +5,33 @@ description: Find and read mail in a connected Command Mail account, summarize o
 
 # Command Mail
 
+Tool names below refer to MCP. With CLI-only access, discover equivalent
+commands through `commandmail capabilities` and `commandmail --help`, and
+pass the selected `--account` on every call. Use only exposed operations.
+
 Help the user complete the requested email task using the connected account.
+
+## Choose the relevant workflow
+
+Handle ordinary mail searches directly. For a broader job, select the relevant
+optional skill included in this plugin; do not load the whole portfolio for a
+simple question:
+
+- [mail-agent-setup](../mail-agent-setup/SKILL.md): agree preferences, action
+  scope and an optional actual host schedule.
+- [mailbox-cleanup](../mailbox-cleanup/SKILL.md): review a backlog and apply
+  confirmed container, spam and archive decisions in resumable batches.
+- [mail-triage](../mail-triage/SKILL.md): process new and changed mail under
+  an existing agreement and report coverage and decisions.
+- [mail-briefing](../mail-briefing/SKILL.md): priorities, payments, deadlines
+  and follow-ups with source evidence and gaps.
+- [mail-replies](../mail-replies/SKILL.md): save/revise replies and handle
+  approved versus explicitly authorized direct sending.
+- [mail-follow-ups](../mail-follow-ups/SKILL.md): track waits for a relevant
+  response without treating a reminder as permission to send.
+
+If only this skill is installed, use its workflows below and explain any missing
+specialized procedure. These files add no rights or background scheduling.
 
 ## Connect and orient
 
