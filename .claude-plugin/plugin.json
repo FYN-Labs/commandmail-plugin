@@ -1,7 +1,7 @@
 {
   "name": "command-mail",
   "displayName": "Command Mail",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Read and organize email, write and revise drafts, send replies, and manage follow-ups in connected Command Mail accounts.",
   "author": {
     "name": "FYN Labs LLC",
