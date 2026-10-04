@@ -28,6 +28,10 @@ and “nothing in this section” is not proof of no obligations.
 - A payment-failure message reports a failure at that time, not today's balance.
   A receipt or paid invoice is not an unpaid obligation. Group matching reminders
   before counting cases; never sum likely duplicate claims.
+- Recurring charges can prompt a keep/cancel decision, but do not establish
+  disuse or authorize cancellation. For a requested subscription review use
+  the optional [mail-subscriptions](../mail-subscriptions/SKILL.md); keep open
+  invoices separate even after a confirmed cancellation.
 - A deadline needs concrete evidence. “No confirmed deadline”, `due: null`, a
   negated request, expired quoted text or routine cancellation-right boilerplate
   is not a current due date. Keep a real question as an open reply instead.

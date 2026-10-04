@@ -32,6 +32,7 @@ nicht automatisch frei.
 | **Überblick geben** | Zeigt Entscheidungen, Antworten, Zahlungsprobleme, Fristen und ausstehende Rückmeldungen mit den zugehörigen Mails. |
 | **Antworten vorbereiten** | Nutzt den Gesprächsverlauf und deinen verfügbaren Kontext für einen Entwurf. Speichern, Freigeben und Senden bleiben unterscheidbar. |
 | **Nachfassen** | Merkt sich, auf welche gesendete Nachricht du noch wartest, und bereitet bei Bedarf einen neuen Entwurf vor. |
+| **Abos prüfen** | Zeigt wiederkehrende Kosten und offene Rechnungen mit Belegen, fragt nach Behalten oder Kündigen und prüft nach deinem konkreten Kündigungsauftrag die Bestätigung. |
 | **Mails finden und lesen** | Bearbeitet einzelne Suchfragen und wählt bei größeren Aufträgen den passenden Ablauf. |
 
 Die [englische Übersicht](agent-skills.md) verlinkt die einzelnen Skills und
@@ -58,7 +59,7 @@ alles erneut durchzusehen. Das ist ein Arbeitsverfahren, keine Zusage, dass
 
 ## Wie du die Skills bekommst
 
-Das Command-Mail-Plugin enthält alle sieben Skillordner. Unterstützt dein Agent
+Das Command-Mail-Plugin enthält alle acht Skillordner. Unterstützt dein Agent
 Plugin-Skills, kann er den passenden Ablauf daraus laden. Eine reine Verbindung
 mit dem Maildienst installiert die Anleitungen noch nicht. Du kannst die
 Skillordner auch einzeln aus diesem Repository übernehmen oder die relevante
@@ -69,3 +70,10 @@ Die Skills erweitern keine Kontorechte. Neue Filterregeln bleiben Vorschläge,
 bis du sie in der App aktivierst. Archivieren und Verschieben in Spam haben ein
 Aktivitätsjournal; Änderungen an Labels oder Archivordnern besitzen derzeit
 keinen solchen Rückgängig-Knopf. Der Agent berücksichtigt das vor einer Änderung.
+
+Eine Rechnung zeigt nicht, ob du einen Dienst noch nutzt. Der
+[Abo-Skill](../skills/mail-subscriptions/SKILL.md) hilft dir bei dieser Entscheidung.
+Eine Kündigung im Anbieterportal braucht deinen konkreten Auftrag und einen
+Browser, den dein Agent selbst bereitstellt; Mailrechte geben ihm diesen Zugriff
+nicht. Ohne diese Möglichkeit zeigt er den nächsten Schritt oder bereitet einen
+Entwurf vor. Offene Rechnungen bleiben auch nach einer Kündigung sichtbar.

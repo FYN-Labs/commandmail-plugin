@@ -29,6 +29,9 @@ simple question:
   approved versus explicitly authorized direct sending.
 - [mail-follow-ups](../mail-follow-ups/SKILL.md): track waits for a relevant
   response without treating a reminder as permission to send.
+- [mail-subscriptions](../mail-subscriptions/SKILL.md): review recurring bills
+  and keep/cancel decisions; a specifically requested provider cancellation
+  uses a separate host browser, not a mail permission.
 
 If only this skill is installed, use its workflows below and explain any missing
 specialized procedure. These files add no rights or background scheduling.

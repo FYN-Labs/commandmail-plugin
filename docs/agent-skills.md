@@ -20,6 +20,7 @@ user's language. A user does not need to learn tool names to choose a workflow.
 | [mail-briefing](../skills/mail-briefing/SKILL.md) | A concise, sourced overview of replies, decisions, payments, deadlines and gaps | „Was braucht heute meine Aufmerksamkeit?“ / “What needs my attention today?” |
 | [mail-replies](../skills/mail-replies/SKILL.md) | Context-aware replies saved for review or sent in the user's chosen mode | „Bereite eine Antwort vor; ich sende selbst.“ / “Prepare a reply; I will send it myself.” |
 | [mail-follow-ups](../skills/mail-follow-ups/SKILL.md) | Track waits for replies and prepare due follow-ups | „Erinnere mich in drei Tagen, wenn darauf keine Antwort kommt.“ / “Track this; I want to follow up in three days if there is no reply.” |
+| [mail-subscriptions](../skills/mail-subscriptions/SKILL.md) | Review recurring bills, surface keep/cancel decisions and verify a specifically requested cancellation through an available host browser | „Prüfe meine Abos; kündige noch nichts.“ / “Review my subscriptions; do not cancel anything yet.” |
 | [mail-workflow](../skills/mail-workflow/SKILL.md) | Find/read mail and route broader tasks to the relevant optional skill | „Finde die letzte Mail zu meinem Angebot.“ / “Find the latest email about my quote.” |
 
 Use setup first when no preferences exist. A historical cleanup is a separate
@@ -46,7 +47,7 @@ instructions or project material. Attach `references/large-mailboxes.md` as well
 for large cleanup jobs. Verify the host can actually access the contents; a link
 alone is not proof that the skill was loaded. Follow that host's privacy and
 persistence controls. The existing `get_organization_guide` tool and
-`commandmail skill` remain the general server guide, not these seven skills.
+`commandmail skill` remain the general server guide, not these eight skills.
 
 Download the repository ZIP from GitHub's **Code → Download ZIP** for the full
 pack; extract only the desired skill folders. Do not run the maintainer's
@@ -62,6 +63,10 @@ OpenAI ZIP build script as part of user installation.
   Mail's checkup receipts show run metadata, not an agent scheduler.
 - **Replies:** sorting, drafting, approved sending and direct sending are
   separate choices. Mailbox `auto` is not permission to send.
+- **Subscriptions:** bills establish charges and terms, not usage. A provider
+  cancellation needs an exact user request and a separate host browser;
+  Command Mail mail permissions supply neither. Open invoices remain separate
+  from cancellation, and an unconfirmed request is not a completed action.
 - **Large histories:** the cleanup skill supplies a bounded inventory and
   resumption method. It does not promise a 100,000-message job completes in one
   run or that a bounded overview has scanned the full history.

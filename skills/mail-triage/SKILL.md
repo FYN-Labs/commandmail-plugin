@@ -60,8 +60,11 @@ If repeated filing suggests a rule, `propose_rule` creates a suggestion the owne
 can activate in the app. Do not silently block all mail from a domain.
 
 Prepare replies only under a confirmed drafting mandate and `mail:draft`; use
-the optional `mail-replies` skill for that workflow. Never pay bills, send,
-unsubscribe or delete as a side effect of sorting. An optional host-provided
+the optional `mail-replies` skill for that workflow. Recurring bills may surface
+a keep/cancel decision; the optional [mail-subscriptions](../mail-subscriptions/SKILL.md)
+handles a requested review and a separately instructed cancellation. Never pay
+bills, cancel subscriptions, send, unsubscribe or delete as a side effect of
+sorting. An optional host-provided
 assessor such as Jev is evidence within an authorized data/cost route, not a
 permission source. Do not require or install it merely to do triage.
 
