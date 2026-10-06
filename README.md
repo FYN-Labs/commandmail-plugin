@@ -2,7 +2,18 @@
 
 [Command Mail](https://commandmail.app) is one inbox for all of your email addresses, built so your AI agent can work in it. The agent reads, searches, sorts and drafts, and sends only if you allow it, per permission and per mailbox.
 
-This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds a mail workflow skill. You need a Command Mail account: [start for free](https://commandmail.app/en) with one address; Pro adds sending, more addresses and your full history.
+This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds four skills. You need a Command Mail account: [start for free](https://commandmail.app/en) with one address; Pro adds sending, more addresses and your full history.
+
+## Skills
+
+| Skill | Use it to |
+| --- | --- |
+| `inbox-setup` | Set up a new account with you: priorities, autonomy, archive folders, signature and a recurring routine your agent host schedules |
+| `inbox-routine` | Run one mail pass: check new mail since the last complete run, presort it, prepare drafts, record the run and write a short brief |
+| `inbox-cleanup` | Clean up a large inbox in agreed passes, build the archive structure, separate spam and phishing and propose sorting rules |
+| `mail-workflow` | Find and read mail, answer with plain or formatted drafts, file conversations and track follow-ups |
+
+Ask your agent, for example, "Set up my inbox and a daily mail routine" or "Run my Command Mail routine". A routine runs on a schedule only if your agent host supports scheduled tasks and you created one.
 
 The server is also listed in the [Official MCP Registry](https://registry.modelcontextprotocol.io) as `app.commandmail/mail`.
 
@@ -63,7 +74,7 @@ The plugin ships no executable code, hooks or install scripts. It declares one r
 | ChatGPT, Codex, Cursor ([Agent Plugins](https://agent-plugins.org)) | `plugin.json`, `mcp.json` |
 | Claude Code | `.claude-plugin/`, `.mcp.json` |
 | Gemini CLI | `gemini-extension.json` |
-| All hosts | `skills/mail-workflow/`, `assets/` |
+| All hosts | `skills/`, `assets/` |
 
 `plugin.json` also carries the listing, review cases and release notes for the OpenAI plugin directory under `extensions.com.openai`. Build the upload ZIP with `scripts/build-openai-zip.sh /path/to/commandmail-plugin.zip`; it contains only the portable package. Reviewer credentials never belong in this repository.
 

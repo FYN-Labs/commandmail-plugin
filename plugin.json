@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "command-mail",
-  "version": "0.2.0",
-  "description": "Read and organize email, write and revise drafts, send replies, and manage follow-ups in connected Command Mail accounts.",
+  "version": "0.3.0",
+  "description": "Read email, file it into folders, write plain or formatted drafts, send approved replies and run a recurring inbox routine in connected Command Mail accounts.",
   "author": {
     "name": "FYN Labs LLC",
     "email": "support@fyn-labs.com",
@@ -23,12 +23,12 @@
       "interface": {
         "displayName": "Command Mail",
         "shortDescription": "Read, draft and act on email",
-        "longDescription": "Work with email across your connected Command Mail mailboxes. Search and read conversations, organize messages, write and revise drafts, send approved replies, forward messages, track follow-ups and prepare a mail briefing. Actions follow your account permissions and mailbox settings. Mailbox and domain setup tools help connect your existing addresses.",
+        "longDescription": "Work with email across your connected Command Mail mailboxes. Search and read conversations, file them into archive folders, write and revise plain or formatted drafts, send approved replies, forward messages, track follow-ups and prepare a mail briefing. Included skills guide the first setup, a recurring inbox routine and the cleanup of a large inbox. Actions follow your account permissions and mailbox settings. Mailbox and domain setup tools help connect your existing addresses.",
         "developerName": "FYN Labs LLC",
         "category": "Productivity",
         "capabilities": [
-          "Read and organize email",
-          "Create and revise drafts",
+          "Read, organize and file email",
+          "Create plain and formatted drafts",
           "Send replies and forward messages",
           "Track follow-ups",
           "Connect mailboxes"
@@ -40,7 +40,7 @@
         "defaultPrompt": [
           "Which emails need my reply today?",
           "Draft a reply to the latest project email and save it for review.",
-          "Show overdue follow-ups and the original conversations."
+          "Set up my inbox and a daily mail routine."
         ],
         "brandColor": "#2862bd",
         "composerIcon": "./assets/icon.png",
@@ -100,7 +100,7 @@
         "commerce_description": "Command Mail does not sell products or take payments in ChatGPT or Codex."
       },
       "publication": {
-        "release_notes": "First Command Mail package for the ChatGPT and Codex plugin directory. It connects the hosted Command Mail MCP server at https://commandmail.app/mcp through OAuth 2.1 with PKCE and adds the mail-workflow skill. The available tools follow the permissions granted at sign-in: searching and reading mail, the daily overview, morning brief and follow-ups; organizing conversations; saved drafts that wait for human approval; sending approved drafts; direct replies and forwarding when explicitly allowed; and mailbox and domain setup."
+        "release_notes": "Version 0.3.0 adds archive folders that agents can create, rename and fill (create_folder, update_folder, file_threads, up to 50 conversations per undoable step), formatted HTML drafts and mail with cleaned markup and a derived plain-text version, and account and mailbox signatures (get_signatures, set_signature). Three new skills guide the first setup with the owner, a recurring inbox routine with recorded checkups and a short brief, and the cleanup of a large inbox in agreed passes. Permissions, mailbox autonomy, draft approval and send limits are unchanged."
       }
     }
   }
