@@ -8,10 +8,10 @@ This repository connects agent hosts to the hosted Command Mail MCP server at `h
 
 | Skill | Use it to |
 | --- | --- |
-| `inbox-setup` | Set up a new account with you: priorities, autonomy, archive folders, signature and a recurring routine your agent host schedules |
-| `inbox-routine` | Run one mail pass: check new mail since the last complete run, presort it, prepare drafts, record the run and write a short brief |
-| `inbox-cleanup` | Clean up a large inbox in agreed passes, build the archive structure, separate spam and phishing and propose sorting rules |
-| `mail-workflow` | Find and read mail, answer with plain or formatted drafts, file conversations and track follow-ups |
+| `inbox-setup` | Set up a new account with you: priorities, autonomy, archive folders, sorting rules, Spam and Trash retention, signature and a recurring routine your agent host schedules |
+| `inbox-routine` | Run one mail pass: check new mail since the last complete run, presort it with your rules, prepare drafts, record the run and write a short brief |
+| `inbox-cleanup` | Clean up a large inbox in agreed passes: the agent sorts, you correct, the agent moves the mail and creates the agreed rules |
+| `mail-workflow` | Find and read mail, answer with plain or formatted drafts and attachments, file conversations, manage folders and track follow-ups |
 
 Ask your agent, for example, "Set up my inbox and a daily mail routine" or "Run my Command Mail routine". A routine runs on a schedule only if your agent host supports scheduled tasks and you created one.
 
@@ -55,7 +55,7 @@ On first use, your agent opens Command Mail in the browser. Sign in and switch o
 
 | Permission | What the agent may do |
 | --- | --- |
-| `mail:read` | Read, search and sort mail, prepare the overview and morning brief, track follow-ups |
+| `mail:read` | Read, search and sort mail, manage folders and the sorting rules you ask for, prepare the overview and morning brief, track follow-ups |
 | `mail:draft` | Create and revise drafts; never sends |
 | `mail:send-approved` | Send exactly the draft revision you approved |
 | `mail:send` | Send without approval, once per message, to at most 20 recipients and within a daily limit |

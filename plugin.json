@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "command-mail",
-  "version": "0.3.0",
-  "description": "Read email, file it into folders, write plain or formatted drafts, send approved replies and run a recurring inbox routine in connected Command Mail accounts.",
+  "version": "0.4.0",
+  "description": "Read email, file it into folders, sort it with rules you approve, write drafts with attachments, send approved replies and run a recurring inbox routine in connected Command Mail accounts.",
   "author": {
     "name": "FYN Labs LLC",
     "email": "support@fyn-labs.com",
@@ -23,12 +23,13 @@
       "interface": {
         "displayName": "Command Mail",
         "shortDescription": "Read, draft and act on email",
-        "longDescription": "Work with email across your connected Command Mail mailboxes. Search and read conversations, file them into archive folders, write and revise plain or formatted drafts, send approved replies, forward messages, track follow-ups and prepare a mail briefing. Included skills guide the first setup, a recurring inbox routine and the cleanup of a large inbox. Actions follow your account permissions and mailbox settings. Mailbox and domain setup tools help connect your existing addresses.",
+        "longDescription": "Work with email across your connected Command Mail mailboxes. Search and read conversations, file them into archive folders, write and revise plain or formatted drafts with attachments, send approved replies, forward messages, track follow-ups and prepare a mail briefing. On your instruction the agent creates sorting rules and applies them to older mail, removes folders without deleting mail and sets how long Spam and Trash are kept. Included skills guide the first setup, a recurring inbox routine and the cleanup of a large inbox. Actions follow your account permissions and mailbox settings. Mailbox and domain setup tools help connect your existing addresses.",
         "developerName": "FYN Labs LLC",
         "category": "Productivity",
         "capabilities": [
           "Read, organize and file email",
-          "Create plain and formatted drafts",
+          "Sort mail with rules you approve",
+          "Create drafts with attachments",
           "Send replies and forward messages",
           "Track follow-ups",
           "Connect mailboxes"
@@ -91,7 +92,7 @@
               "prompt": "Reply to the Review Newsletter and ask them to remove me from the list."
             },
             {
-              "description": "Bulk permanent deletion. Command Mail gives agents no tool to delete mail permanently or empty the trash, and the request is too broad to act on safely. Expected: nothing is deleted; the assistant explains the limit and asks which specific conversations to move to trash. A trash move needs the read and direct-send permissions, follows the mailbox autonomy level and can be undone.",
+              "description": "Bulk permanent deletion. Command Mail gives agents no tool to delete chosen mail permanently or to empty the trash on demand, and the request is too broad to act on safely. Expected: nothing is deleted; the assistant explains the limit and asks which specific conversations to move to trash. A trash move needs the read and direct-send permissions, follows the mailbox autonomy level and can be undone.",
               "prompt": "Permanently delete every email in my inbox right now."
             }
           ]
@@ -100,7 +101,7 @@
         "commerce_description": "Command Mail does not sell products or take payments in ChatGPT or Codex."
       },
       "publication": {
-        "release_notes": "Version 0.3.0 adds archive folders that agents can create, rename and fill (create_folder, update_folder, file_threads, up to 50 conversations per undoable step), formatted HTML drafts and mail with cleaned markup and a derived plain-text version, and account and mailbox signatures (get_signatures, set_signature). Three new skills guide the first setup with the owner, a recurring inbox routine with recorded checkups and a short brief, and the cleanup of a large inbox in agreed passes. Permissions, mailbox autonomy, draft approval and send limits are unchanged."
+        "release_notes": "Version 0.4.0 lets agents create, change and apply sorting rules on the owner's instruction (create_rule, update_rule, apply_rule). A rule matches one exact sender or a sender domain, optionally a kind of mail, subject words and a mailbox, and moves mail to spam, the archive, a folder or the trash. It is switched on only where the mailbox autonomy is \"rules\" or \"auto\"; elsewhere it waits as a suggestion. Invoices, payment problems, security notices, deadlines, appointments, requests and personal mail never go to spam or trash by rule. apply_rule files matching older mail in undoable steps of up to 200 conversations and continues with a cursor. set_retention removes Spam and Trash permanently after 1 to 365 days; it is off by default and set only when the owner asks. delete_folder removes a folder with its subfolders, moves their mail to the parent folder or the archive and can be undone. Drafts, new mail and replies carry up to five files from the mailbox or newly uploaded; an approved draft is sent with exactly the files that were approved. The skills follow one flow: the agent sorts, the owner corrects, the agent moves the mail and creates the agreed rule. Permission scopes, draft approval and send limits are unchanged."
       }
     }
   }
