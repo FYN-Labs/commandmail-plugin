@@ -1,0 +1,28 @@
+{
+  "name": "command-mail",
+  "version": "0.4.0",
+  "description": "Read email, file it into folders, sort it with rules you approve, write drafts with attachments, send approved replies and run a recurring inbox routine in connected Command Mail accounts. The plugin is free and MIT licensed; the Command Mail Free plan covers reading, search, sorting and drafts for one mailbox, and sending needs a paid plan bought on commandmail.app.",
+  "author": {
+    "name": "FYN Labs LLC",
+    "email": "support@fyn-labs.com"
+  },
+  "homepage": "https://commandmail.app/en",
+  "repository": "https://github.com/FYN-Labs/commandmail-plugin",
+  "license": "MIT",
+  "keywords": [
+    "command mail",
+    "commandmail",
+    "email",
+    "mail",
+    "inbox",
+    "mcp",
+    "follow-up",
+    "briefing"
+  ],
+  "logo": "assets/logo-light.png",
+  "mcpServers": {
+    "commandmail": {
+      "url": "https://commandmail.app/mcp"
+    }
+  }
+}

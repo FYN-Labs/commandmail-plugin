@@ -2,7 +2,15 @@
 
 [Command Mail](https://commandmail.app) is one inbox for all of your email addresses, built so your AI agent can work in it. The agent reads, searches, sorts and drafts, and sends only if you allow it, per permission and per mailbox.
 
-This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds four skills. You need a Command Mail account: [start for free](https://commandmail.app/en) with one address; Pro adds sending, more addresses and your full history.
+This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds four skills. You need a Command Mail account; [start for free](https://commandmail.app/en) with one address.
+
+## Plans
+
+The plugin and the MCP connector are free and released under the MIT License. Installing and using them costs nothing.
+
+The hosted Command Mail service has a Free plan that does not expire: one mailbox, the last 90 days of mail, reading, search, sorting, the morning brief and drafts. On the Free plan the agent cannot send email.
+
+The paid Pro plan adds sending, up to ten mailboxes and the full mail history. Plans are bought only on [commandmail.app](https://commandmail.app/en), never inside an agent host or editor; current prices are listed there. Without a paid plan, the agent can still read, search, sort and draft; actions that send mail, such as replies and forwards, need Pro.
 
 ## Skills
 
@@ -33,11 +41,13 @@ codex plugin add command-mail@commandmail
 /plugin install command-mail@commandmail
 ```
 
-**Cursor.** Clone the repository into your local plugin folder, then run *Developer: Reload Window*:
+**Cursor.** Once the plugin is listed in the [Cursor Marketplace](https://cursor.com/marketplace), install it from **Customize**. To try it before that, clone the repository into your local plugin folder and run *Developer: Reload Window*:
 
 ```sh
 git clone https://github.com/FYN-Labs/commandmail-plugin ~/.cursor/plugins/local/command-mail
 ```
+
+The MCP server then appears as `plugin-command-mail-commandmail`. Cursor opens the Command Mail sign-in on first use; the plugin needs no API key or variable.
 
 **Gemini CLI.**
 
@@ -72,6 +82,7 @@ The plugin ships no executable code, hooks or install scripts. It declares one r
 | Host | Files |
 | --- | --- |
 | ChatGPT, Codex, Cursor ([Agent Plugins](https://agent-plugins.org)) | `plugin.json`, `mcp.json` |
+| Cursor Marketplace (logo and listing) | `.cursor-plugin/plugin.json` |
 | Claude Code | `.claude-plugin/`, `.mcp.json` |
 | Gemini CLI | `gemini-extension.json` |
 | All hosts | `skills/`, `assets/` |
