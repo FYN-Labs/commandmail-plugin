@@ -6,9 +6,9 @@
   "author": {
     "name": "FYN Labs LLC",
     "email": "support@fyn-labs.com",
-    "url": "https://commandmail.app"
+    "url": "https://commandmail.app/?utm_source=codex&utm_medium=plugin"
   },
-  "homepage": "https://commandmail.app",
+  "homepage": "https://commandmail.app/?utm_source=codex&utm_medium=plugin",
   "repository": "https://github.com/FYN-Labs/commandmail-plugin",
   "license": "MIT",
   "keywords": [
@@ -34,10 +34,10 @@
           "Track follow-ups",
           "Connect mailboxes"
         ],
-        "websiteURL": "https://commandmail.app",
-        "supportURL": "https://commandmail.app/legal",
-        "privacyPolicyURL": "https://commandmail.app/privacy",
-        "termsOfServiceURL": "https://commandmail.app/terms",
+        "websiteURL": "https://commandmail.app/?utm_source=chatgpt&utm_medium=plugin",
+        "supportURL": "https://commandmail.app/legal?utm_source=chatgpt&utm_medium=plugin",
+        "privacyPolicyURL": "https://commandmail.app/privacy?utm_source=chatgpt&utm_medium=plugin",
+        "termsOfServiceURL": "https://commandmail.app/terms?utm_source=chatgpt&utm_medium=plugin",
         "defaultPrompt": [
           "Which emails need my reply today?",
           "Draft a reply to the latest project email and save it for review.",

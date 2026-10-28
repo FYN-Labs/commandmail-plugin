@@ -6,9 +6,9 @@
   "author": {
     "name": "FYN Labs LLC",
     "email": "support@fyn-labs.com",
-    "url": "https://commandmail.app"
+    "url": "https://commandmail.app/?utm_source=claude&utm_medium=plugin"
   },
-  "homepage": "https://commandmail.app",
+  "homepage": "https://commandmail.app/?utm_source=claude&utm_medium=plugin",
   "repository": "https://github.com/FYN-Labs/commandmail-plugin",
   "license": "MIT",
   "keywords": [
@@ -21,8 +21,8 @@
     "briefing"
   ],
   "icon": "./assets/icon.png",
-  "documentationUrl": "https://commandmail.app/en/docs",
-  "supportUrl": "https://commandmail.app/legal",
-  "privacyPolicyUrl": "https://commandmail.app/privacy",
-  "termsOfServiceUrl": "https://commandmail.app/terms"
+  "documentationUrl": "https://commandmail.app/en/docs?utm_source=claude&utm_medium=plugin",
+  "supportUrl": "https://commandmail.app/legal?utm_source=claude&utm_medium=plugin",
+  "privacyPolicyUrl": "https://commandmail.app/privacy?utm_source=claude&utm_medium=plugin",
+  "termsOfServiceUrl": "https://commandmail.app/terms?utm_source=claude&utm_medium=plugin"
 }

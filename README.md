@@ -1,8 +1,8 @@
 # Command Mail plugin
 
-[Command Mail](https://commandmail.app) is one inbox for all of your email addresses, built so your AI agent can work in it. The agent reads, searches, sorts and drafts, and sends only if you allow it, per permission and per mailbox.
+[Command Mail](https://commandmail.app/?utm_source=github&utm_medium=readme) is one inbox for all of your email addresses, built so your AI agent can work in it. The agent reads, searches, sorts and drafts, and sends only if you allow it, per permission and per mailbox.
 
-This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds four skills. You need a Command Mail account; [start for free](https://commandmail.app/en) with one address.
+This repository connects agent hosts to the hosted Command Mail MCP server at `https://commandmail.app/mcp` and adds four skills. You need a Command Mail account; [start for free](https://commandmail.app/en?utm_source=github&utm_medium=readme) with one address.
 
 ## Plans
 
@@ -10,7 +10,7 @@ The plugin and the MCP connector are free and released under the MIT License. In
 
 The hosted Command Mail service has a Free plan that does not expire: one mailbox, the last 90 days of mail, reading, search, sorting, the morning brief and drafts. On the Free plan the agent cannot send email.
 
-The paid Pro plan adds sending, up to ten mailboxes and the full mail history. Plans are bought only on [commandmail.app](https://commandmail.app/en), never inside an agent host or editor; current prices are listed there. Without a paid plan, the agent can still read, search, sort and draft; actions that send mail, such as replies and forwards, need Pro.
+The paid Pro plan adds sending, up to ten mailboxes and the full mail history. Plans are bought only on [commandmail.app](https://commandmail.app/en?utm_source=github&utm_medium=readme), never inside an agent host or editor; current prices are listed there. Without a paid plan, the agent can still read, search, sort and draft; actions that send mail, such as replies and forwards, need Pro.
 
 ## Skills
 
@@ -91,9 +91,9 @@ The plugin ships no executable code, hooks or install scripts. It declares one r
 
 ## Legal and support
 
-- [Privacy policy](https://commandmail.app/privacy)
-- [Terms of service](https://commandmail.app/terms)
-- [Legal notice](https://commandmail.app/legal)
+- [Privacy policy](https://commandmail.app/privacy?utm_source=github&utm_medium=readme)
+- [Terms of service](https://commandmail.app/terms?utm_source=github&utm_medium=readme)
+- [Legal notice](https://commandmail.app/legal?utm_source=github&utm_medium=readme)
 - Support: [support@fyn-labs.com](mailto:support@fyn-labs.com)
 
 Command Mail is operated by FYN Labs LLC. This plugin is released under the [MIT License](LICENSE).

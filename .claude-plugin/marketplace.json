@@ -3,7 +3,7 @@
   "owner": {
     "name": "FYN Labs LLC",
     "email": "support@fyn-labs.com",
-    "url": "https://commandmail.app"
+    "url": "https://commandmail.app/?utm_source=claude&utm_medium=plugin"
   },
   "description": "Command Mail plugin by FYN Labs LLC.",
   "plugins": [
